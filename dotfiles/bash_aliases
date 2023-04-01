@@ -1,0 +1,3 @@
+#alias copy="wl-copy"
+alias copy="xclip -sel c"
+alias dotdrop="~/.dotfiles/dotdrop.sh --no-banner"

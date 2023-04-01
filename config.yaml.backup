@@ -1,0 +1,207 @@
+actions:
+  pre:
+    ohmyzsh: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    p10k: git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+  f_p10k.zsh:
+    src: p10k.zsh
+    dst: ~/.p10k.zsh
+  f_alacritty.yml:
+    src: config/alacritty/alacritty.yml
+    dst: ~/.config/alacritty/alacritty.yml
+  f_dci_profile:
+    src: dci_profile
+    dst: ~/.dci_profile
+  f_solus_colors:
+    src: solus_colors
+    dst: ~/.solus_colors
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
+  d_fonts:
+    src: fonts
+    dst: ~/.fonts
+  f_g213-blue:
+    src: g213-blue
+    dst: ~/g213-blue
+  f_setkeyboardcolor.sh:
+    src: setKeyboardColor.sh
+    dst: ~/setKeyboardColor.sh
+  f_shutdown.sh:
+    src: jboss/jboss/bin/shutdown.sh
+    dst: ~/jboss/jboss/bin/shutdown.sh
+    chmod: '770'
+  f_startup.sh:
+    src: jboss/jboss/bin/startup.sh
+    dst: ~/jboss/jboss/bin/startup.sh
+    chmod: '770'
+  f_standalone-full-prod1.xml:
+    src: jboss/jboss/standalone/configuration/standalone-full-prod1.xml
+    dst: ~/jboss/jboss/standalone/configuration/standalone-full-prod1.xml
+  f_standalone-full-qa1.xml:
+    src: jboss/jboss/standalone/configuration/standalone-full-qa1.xml
+    dst: ~/jboss/jboss/standalone/configuration/standalone-full-qa1.xml
+  f_standalone-full.xml:
+    src: jboss/jboss/standalone/configuration/standalone-full.xml
+    dst: ~/jboss/jboss/standalone/configuration/standalone-full.xml
+  f_data-sources.json:
+    src: local/share/DBeaverData/workspace6/General/.dbeaver/data-sources.json
+    dst: ~/.local/share/DBeaverData/workspace6/General/.dbeaver/data-sources.json
+  f_bash_aliases:
+    src: bash_aliases
+    dst: ~/.bash_aliases
+  d_fonts_1:
+    src: fonts
+    dst: ~/.fonts
+  f_bash_aliases_1:
+    src: bash_aliases
+    dst: ~/.bash_aliases
+  f_gitconfig_1:
+    src: gitconfig
+    dst: ~/.gitconfig
+  f_ssh-agent-startup.sh:
+    src: config/plasma-workspace/env/ssh-agent-startup.sh
+    dst: ~/.config/plasma-workspace/env/ssh-agent-startup.sh
+    chmod: '755'
+  f_ssh-agent-autoshutdown.sh:
+    src: config/plasma-workspace/shutdown/ssh-agent-autoshutdown.sh
+    dst: ~/.config/plasma-workspace/shutdown/ssh-agent-autoshutdown.sh
+    chmod: '755'
+  f_ssh-add.sh:
+    src: config/autostart-scripts/ssh-add.sh
+    dst: ~/.config/autostart-scripts/ssh-add.sh
+    chmod: '755'
+  f_credentials-config.json:
+    src: local/share/DBeaverData/workspace6/General/.dbeaver/credentials-config.json
+    dst: ~/.local/share/DBeaverData/workspace6/General/.dbeaver/credentials-config.json
+    chmod: '664'
+  f_inter-blackitalic.otf:
+    src: fonts/Inter Desktop/Inter-BlackItalic.otf
+    dst: ~/.fonts/Inter Desktop/Inter-BlackItalic.otf
+  f_inter-black.otf:
+    src: fonts/Inter Desktop/Inter-Black.otf
+    dst: ~/.fonts/Inter Desktop/Inter-Black.otf
+  f_inter-bolditalic.otf:
+    src: fonts/Inter Desktop/Inter-BoldItalic.otf
+    dst: ~/.fonts/Inter Desktop/Inter-BoldItalic.otf
+  f_inter-bold.otf:
+    src: fonts/Inter Desktop/Inter-Bold.otf
+    dst: ~/.fonts/Inter Desktop/Inter-Bold.otf
+  f_inter-extrabolditalic.otf:
+    src: fonts/Inter Desktop/Inter-ExtraBoldItalic.otf
+    dst: ~/.fonts/Inter Desktop/Inter-ExtraBoldItalic.otf
+  f_inter-extrabold.otf:
+    src: fonts/Inter Desktop/Inter-ExtraBold.otf
+    dst: ~/.fonts/Inter Desktop/Inter-ExtraBold.otf
+  f_inter-extralightitalic.otf:
+    src: fonts/Inter Desktop/Inter-ExtraLightItalic.otf
+    dst: ~/.fonts/Inter Desktop/Inter-ExtraLightItalic.otf
+  f_inter-extralight.otf:
+    src: fonts/Inter Desktop/Inter-ExtraLight.otf
+    dst: ~/.fonts/Inter Desktop/Inter-ExtraLight.otf
+  f_inter-italic.otf:
+    src: fonts/Inter Desktop/Inter-Italic.otf
+    dst: ~/.fonts/Inter Desktop/Inter-Italic.otf
+  f_inter-lightitalic.otf:
+    src: fonts/Inter Desktop/Inter-LightItalic.otf
+    dst: ~/.fonts/Inter Desktop/Inter-LightItalic.otf
+  f_inter-light.otf:
+    src: fonts/Inter Desktop/Inter-Light.otf
+    dst: ~/.fonts/Inter Desktop/Inter-Light.otf
+  f_inter-mediumitalic.otf:
+    src: fonts/Inter Desktop/Inter-MediumItalic.otf
+    dst: ~/.fonts/Inter Desktop/Inter-MediumItalic.otf
+  f_inter-medium.otf:
+    src: fonts/Inter Desktop/Inter-Medium.otf
+    dst: ~/.fonts/Inter Desktop/Inter-Medium.otf
+  f_inter-regular.otf:
+    src: fonts/Inter Desktop/Inter-Regular.otf
+    dst: ~/.fonts/Inter Desktop/Inter-Regular.otf
+  f_inter-semibolditalic.otf:
+    src: fonts/Inter Desktop/Inter-SemiBoldItalic.otf
+    dst: ~/.fonts/Inter Desktop/Inter-SemiBoldItalic.otf
+  f_inter-semibold.otf:
+    src: fonts/Inter Desktop/Inter-SemiBold.otf
+    dst: ~/.fonts/Inter Desktop/Inter-SemiBold.otf
+  f_inter-thinitalic.otf:
+    src: fonts/Inter Desktop/Inter-ThinItalic.otf
+    dst: ~/.fonts/Inter Desktop/Inter-ThinItalic.otf
+  f_inter-thin.otf:
+    src: fonts/Inter Desktop/Inter-Thin.otf
+    dst: ~/.fonts/Inter Desktop/Inter-Thin.otf
+  f_inter-v.ttf:
+    src: fonts/Inter Desktop/Inter-V.ttf
+    dst: ~/.fonts/Inter Desktop/Inter-V.ttf
+  f_config-dev.xml:
+    src: jboss/jboss/standalone/configuration/config-dev.xml
+    dst: ~/jboss/jboss/standalone/configuration/config-dev.xml
+  f_config-prod1.xml:
+    src: jboss/jboss/standalone/configuration/config-prod1.xml
+    dst: ~/jboss/jboss/standalone/configuration/config-prod1.xml
+  f_config-qa1.xml:
+    src: jboss/jboss/standalone/configuration/config-qa1.xml
+    dst: ~/jboss/jboss/standalone/configuration/config-qa1.xml
+  f_config-tests.xml:
+    src: jboss/jboss/standalone/configuration/config-tests.xml
+    dst: ~/jboss/jboss/standalone/configuration/config-tests.xml
+  f_standalone-full-tests.xml:
+    src: jboss/jboss/standalone/configuration/standalone-full-tests.xml
+    dst: ~/jboss/jboss/standalone/configuration/standalone-full-tests.xml
+  d_scripts:
+    src: local/share/DBeaverData/workspace6/General/Scripts
+    dst: ~/.local/share/DBeaverData/workspace6/General/Scripts
+profiles:
+  pop-os:
+    dotfiles:
+    - f_bashrc
+    - f_zshrc
+    - f_p10k.zsh
+    - f_alacritty.yml
+    - f_dci_profile
+    - f_solus_colors
+    - f_gitconfig
+    - d_fonts
+    - f_g213-blue
+    - f_setkeyboardcolor.sh
+    - f_shutdown.sh
+    - f_startup.sh
+    - f_standalone-full-prod1.xml
+    - f_standalone-full-qa1.xml
+    - f_standalone-full.xml
+    - f_data-sources.json
+    - f_bash_aliases
+  osuse:
+    dotfiles:
+    - d_fonts
+    - f_bash_aliases
+    - f_gitconfig
+    - f_dci_profile
+    - f_bashrc
+    - f_zshrc
+    - f_p10k.zsh
+    - f_data-sources.json
+    - f_ssh-agent-startup.sh
+    - f_ssh-agent-autoshutdown.sh
+    - f_ssh-add.sh
+    - f_credentials-config.json
+    - f_shutdown.sh
+    - f_startup.sh
+    - f_standalone-full-prod1.xml
+    - f_standalone-full-qa1.xml
+    - f_standalone-full.xml
+    - f_config-dev.xml
+    - f_config-prod1.xml
+    - f_config-qa1.xml
+    - f_config-tests.xml
+    - f_standalone-full-tests.xml
+    - d_scripts

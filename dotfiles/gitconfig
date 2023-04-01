@@ -1,0 +1,12 @@
+[user]
+	name = Xavier Guzman
+	email = xaguzman@gmail.com
+[core]
+	pager = less -F -X
+[alias]
+	hist = "!set -x;git log --pretty=format:\"%C(auto)%h %ad | %s%d %C(blue)[%an]\" --graph --date=short"
+	#hist = "log --pretty=format:\"%h %ad | %s%d %C(yellow)[%an]\" --graph --date=short"
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main

@@ -1,0 +1,43 @@
+config:
+  backup: true
+  banner: false
+  create: true
+  dotpath: dotfiles
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+dotfiles:
+  d_fonts:
+    src: fonts
+    dst: ~/.fonts
+  f_bash_aliases:
+    src: bash_aliases
+    dst: ~/.bash_aliases
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
+  f_ssh-agent-autoshutdown.sh:
+    src: config/plasma-workspace/shutdown/ssh-agent-autoshutdown.sh
+    dst: ~/.config/plasma-workspace/shutdown/ssh-agent-autoshutdown.sh
+    chmod: '755'
+  f_ssh-add.sh.desktop:
+    src: config/autostart/ssh-add.sh.desktop
+    dst: ~/.config/autostart/ssh-add.sh.desktop
+    chmod: '600'
+  f_ssh-add.sh:
+    src: config/old-autostart-scripts/ssh-add.sh
+    dst: ~/.config/old-autostart-scripts/ssh-add.sh
+    chmod: '755'
+profiles:
+  default:
+    dotfiles:
+    - d_fonts
+    - f_bash_aliases
+    - f_gitconfig
+  kde:
+    dotfiles:
+    - f_ssh-agent-startup.sh
+    - f_ssh-agent-autoshutdown.sh
+    - f_ssh-add.sh.desktop
+    - f_ssh-add.sh
